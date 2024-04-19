@@ -30,7 +30,7 @@ jobs:
     - uses: softprops/action-gh-release@v2
       with:
         files: |
-          out/magisk-module/magisk-overlayfs*.zip
+          out/magisk-module/magisk-overlayfs-release.zip
         fail_on_unmatched_files: true
         append_body: false
         tag_name: ${{ env.RELEASE_TAG }}
