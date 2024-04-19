@@ -25,6 +25,8 @@ jobs:
       run: |
         chmod 777 ./build.sh
         ./build.sh
+    - name: Check Files
+      run: tree ${{ github.workspace }}    
     - name: Create MTG Release Tag
       run: echo "RELEASE_TAG=Release-$(date +'%Y%d%m')" >> $GITHUB_ENV
     - uses: softprops/action-gh-release@v2
